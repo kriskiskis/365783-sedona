@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Добро пожаловать в Седону!</title>
+  </head>
+  <body>
+     <header class="main-header">
+	     <div class="logo">
+		     <img src="logo-sedona.jpg" width="140" height="70" alt="Герб Седоны">
+		 </div>
+	     <nav class="main-navigation">
+	         <ul class="main-navigation menu">
+		         <li><a href="№">Информация</a></li>
+			     <li><a href="№">Фото и видео</a></li>
+			     <li><a href="№">Карта штата</a></li>
+			     <li><a href="№">Гостиницы</a></li>
+		     </ul>
+	     </nav>
+	 </header>
+     <main class="main-page">
+	     <article class="tagline">
+		     <section class="tagline welcome">Welcome</section>
+			 <section class="tagline gorgeous">to the gorgeous</section>
+			 <section class="tagline sedona">SEDONA</section>
+			 <section class="tagline tagline-main">"Because the Grand Canyon sucks!"</section>
+		 </article>
+	     <p class="sedona-cool">Седона - небольшой город в аризоне, заслуживающий большего!</p>
+		 <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
+		 <ul class="advantages">
+		     <li class="advantages pictured">
+			     <h3>Настоящий городок</h3>
+			     <p>Седона - не аттракцион для туристов,там течет своя жизнь</p>
+			 </li>
+			 <li class="advantages best-in-trip">
+			     <ul class="recomendations">
+				     <li>
+					     <h3>Жилье</h3>
+						 <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+					 </li>
+					 <li>
+					     <h3>Еда</h3>
+						 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+					 </li>
+					 <li>
+					     <h3>Сувениры</h3>
+						 <p>Не только китайского, но и местного произовдства!</p>
+					 </li>
+				 </ul>
+			 </li>
+			 <li class="advantages pictured-2">
+			     <h3>Там есть мост дьявола</h3>
+			     <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+			 </li>
+			 <li class="advantages block">
+			     <h3>Небольшая площадь</h3>
+			     <p>Все достопримечательности находятся очень близко</p>
+			 </li>
+			 <li class="advantages block">
+			     <h3>Красивая дорога</h3>
+			     <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			 </li>
+			 <li class="advant block">
+			     <h3>Мало туристов</h3>
+			     <p>Большинство едет в Гранд Каньон и толпится там</p>
+			 </li>
+		 </ul>
+		 <article class="booking">
+		     <section class="booking title">
+			     <h3>Бронирование гостиниц</h3> <!--Будет скрыт-->
+				 <p>Заинтересовались?</p>
+				 <p>Укажите предполагаемые даты поездки, <br>
+				 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			 </section>
+			 <section class="booking-form">
+			     <a class="booking-form search" href="#">Поиск гостиницы в Седоне</a>
+				 <form class="booking-form fill-in" oninput="adults-amount.value=adults-amount-result.value">
+				     <fieldset class="main-booking-form">
+				         <div>
+						     <label for="arrival">Дата заезда:</label>
+						     <input type="date" id="arrival" name="arrival-date">
+						 </div>	 
+						 
+						 <div>
+						     <label for="departure">Дата выезда:</label>
+						     <input type="date" id="departure" name="departure-date">
+						 </div>
+						 
+						 <div>
+						     <label for="adults">Взрослые:</label>
+							 <input type="range" id="adults" name="adults-amount" step="1" min="1" max="100">
+							 <output name="adults-amount-result" for="adults">2</output>
+							 
+							 <label for="children">Дети:</label>
+							 <input type="range" id="children" name="children-amount" step="1" min="1" max="100">
+							 <output name="children-amount-result" for="children">0</output>
+						 </div>
+						 <input type="submit" value="Найти">
+				     </fieldset>
+				 </form>
+			 </section>
+		 </article>
+		 <div class="sedona-map">
+		     <img src="map-sedona.jpg" width="1200" height="590" alt="Седона - где это?">
+		 </div>
+	 </main>
+	 <footer class="main-footer">
+	     <p class="tag-sedona">#VISITSEDONA</p>
+		 <ul class="social-networks">
+		     <li><a class="social-button" href="#">Twitter</a></li>
+			 <li><a class="social-button" href="#">Facebook</a></li>
+			 <li><a class="social-button" href="#">YouTube</a></li>
+		 </ul>
+		 <p>
+		     <span>Website by</span>
+			 <a class="creator" href="#">html academy</a>
+		 </p>
+	 </footer>
+  </body>
+</html>

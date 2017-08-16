@@ -20,106 +20,109 @@
 	 </header>
 	 <main>
 	     <div class="choose-hotel">
-		     <h2>Фильтр выбора отеля</h2>  <!--Заголовок будет скрыт-->
-		     <section class="hotel-structure"> <!--Будет добавлена форма и чекбоксы для каждого пункта выбора-->
-			     <h3>Инфраструктура:</h3>
-		         <ul class="hotel-structure-choose">
-				     <li>Бассейн</li>
-					 <li>Парковка</li>
-					 <li>Wi-Fi</li>
-			     </ul>
-			 </section>
-			 <section class="type-of-hotel">
-			     <h3>Тип жилья:</h3>
-				 <ul class="type-of-hotel-choose">
-				     <li>Гостиница</li>
-					 <li>Мотель</li>
-					 <li>Апартаменты</li>
-				 </ul>
-			 </section>
-			 <section class="price">
-			     <h3>Стоимость в сутки</h3>
-				 <table class="choose-price">
-				     <tr>
-					     <td>ОТ 0</td>
-						 <td>ДО 3000</td>
-					 </tr>
-				 </table>
-				 <form class="search-button">
-				     <a href="#"><button>Показать</button></a>
-				 </form>
-			 </section>
+		     <h2>Фильтр выбора отеля</h2>
+             <form class="about-hotel">
+		         <fieldset class="hotel-structure">
+				     <legend>Инфраструктура:</legend>
+					 <div>
+			             <label><input type="checkbox" name="pool" checked>Бассейн</label>
+					 </div>
+					 
+					 <div>
+			             <label><input type="checkbox" name="parking">Парковка</label>
+					 </div>
+					 
+					 <div>
+			             <label><input type="checkbox" name="wi-fi">Wi-Fi</label>
+					 </div>
+			     </fieldset>
+				 
+			     <fieldset class="type-of-hotel">
+			         <legend>Тип жилья:</legend>
+					 <div>
+			             <label><input type="checkbox" name="hotel" checked>Гостиница</label>
+					 </div>
+					 
+					 <div>
+			             <label><input type="checkbox" name="motel" checked>Мотель</label>
+					 </div>
+					 
+					 <div>
+			             <label><input type="checkbox" name="appartaments" checked>Апартаменты</label>
+					 </div>
+			     </fieldset>
+				 
+                 <fieldset class="price">
+				     <legend>Стоимость в сутки (Р):</legend>
+					 <label>От 0 до 3000</label> <br>
+					 <input type="range" min="1" max="3000">
+				 </fieldset>
+				 <input type="submit" value="Показать">
+			 </form>
 		 </div>
 		 <section class="results-of-search">
 		     <p>НАЙДЕНО:3</p>
 			 <ul class="sort-for">
-			     <li class="active">По цене</li>
-				 <li class="no-active">По типу</li>
-				 <li class="no-active">По рейтингу</li>
+			     <h5>Сортировка:</h5>
+			     <li class="active"><a href="#">По цене</a></li>
+				 <li class="no-active"><a href="#">По типу</a></li>
+				 <li class="no-active"><a href="#">По рейтингу</a></li>
 			 </ul>
+			 <div class="sorting-results">
+			     <a href="#" class="sorting-results-up"><img src="#" alt="up"></a>
+				 <a href="#" class="sorting-results-down"><img src="#"  alt="down"></a>
+			 </div>
 		 </section>
 		 <article class="result-hotels">
-		     <section class="amara-hotel">
+		     <section class="hotel-found">
 			     <table class="amara-hotel-info">
-			         <h4>AMARA RESORT & SPA</h4>
+			         <caption>AMARA RESORT & SPA</caption>
 			             <tr class="description">
 				             <td>Гостиница</td>
 					         <td>От 4000 Р.</td>
 				         </tr>
 				         <tr class="result-hotels-buttons">
 				             <td>
-					             <a href="#">
-						             <button>Подробнее</button>
-						         </a>
+					             <a href="#">Подробнее</a>
 					         </td>
 					         <td>
-					             <a href="#">
-						             <button>Забронировать</button>
-						         </a>
+					             <a href="#">Забронировать</a>
 					         </td>
 				         </tr>
 			     </table>
 				 <p>Рейтинг:8.5</p>
 			 </section>
-			 <section class="desert-inn">
+			 <section class="hotel-found">
 			     <table class="desert-inn-info">
-			         <h4>DESERT QUAIL INN</h4>
+			         <caption>DESERT QUAIL INN</caption>
 			             <tr class="description">
 				             <td>Мотель</td>
 					         <td>От 3000 Р.</td>
 				         </tr>
 				         <tr class="result-hotels-buttons">
 				             <td>
-					             <a href="#">
-						             <button>Подробнее</button>
-						         </a>
+					             <a href="#">Подробнее</a>
 					         </td>
 					         <td>
-					             <a href="#">
-						             <button>Забронировать</button>
-						         </a>
+					             <a href="#">Забронировать</a>
 					         </td>
 				         </tr>
 			     </table>
 				 <p>Рейтинг:8.9</p>
 			 </section>
-			 <section class="villas">
+			 <section class="hotel-found">
 			     <table class="villas-info">
-			         <h4>VILLAS AT POCO DIABLO</h4>
+			         <caption>VILLAS AT POCO DIABLO</caption>
 			             <tr class="description">
 				             <td>Апартаменты</td>
 					         <td>От 2000 Р.</td>
 				         </tr>
 				         <tr class="result-hotels-buttons">
 				             <td>
-					             <a href="#">
-						             <button>Подробнее</button>
-						         </a>
+					             <a href="#">Подробнее</a>
 					         </td>
 					         <td>
-					             <a href="#">
-						             <button>Забронировать</button>
-						         </a>
+					             <a href="#">Забронировать</a>
 					         </td>
 				         </tr>
 			     </table>
@@ -136,7 +139,7 @@
 		 </ul>
 		 <p>
 		     <span>Website by</span>
-			 <a class="creator" href="#">html academy<a/>
+			 <a class="creator" href="#">html academy</a>
 		 </p>
 	 </footer>
    </body>
