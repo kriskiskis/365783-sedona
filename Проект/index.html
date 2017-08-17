@@ -6,10 +6,8 @@
   </head>
   <body>
      <header class="main-header">
-	     <div class="logo">
-		     <img src="logo-sedona.jpg" width="140" height="70" alt="Герб Седоны">
-		 </div>
 	     <nav class="main-navigation">
+		     <img class="logo-sedona" src="logo-sedona.jpg" width="140" height="70" alt="Герб Седоны">
 	         <ul class="main-navigation menu">
 		         <li><a href="№">Информация</a></li>
 			     <li><a href="№">Фото и видео</a></li>
@@ -19,12 +17,9 @@
 	     </nav>
 	 </header>
      <main class="main-page">
-	     <article class="tagline">
-		     <section class="tagline welcome">Welcome</section>
-			 <section class="tagline gorgeous">to the gorgeous</section>
-			 <section class="tagline sedona">SEDONA</section>
-			 <section class="tagline tagline-main">"Because the Grand Canyon sucks!"</section>
-		 </article>
+	     <div class="tagline">
+		     <img class="tagline-text" src="tagline-main.jpg" alt="Welcom to Sedona">
+		 </div>
 	     <p class="sedona-cool">Седона - небольшой город в аризоне, заслуживающий большего!</p>
 		 <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
 		 <ul class="advantages">
@@ -74,26 +69,28 @@
 			 </section>
 			 <section class="booking-form">
 			     <a class="booking-form search" href="#">Поиск гостиницы в Седоне</a>
-				 <form class="booking-form fill-in" oninput="adults-amount.value=adults-amount-result.value">
+				 <form class="booking-form fill-in">
 				     <fieldset class="main-booking-form">
-				         <div>
+				         <div class="arrival">
 						     <label for="arrival">Дата заезда:</label>
 						     <input type="date" id="arrival" name="arrival-date">
 						 </div>	 
 						 
-						 <div>
+						 <div class="departure">
 						     <label for="departure">Дата выезда:</label>
 						     <input type="date" id="departure" name="departure-date">
 						 </div>
 						 
-						 <div>
+						 <div class="age">
 						     <label for="adults">Взрослые:</label>
-							 <input type="range" id="adults" name="adults-amount" step="1" min="1" max="100">
-							 <output name="adults-amount-result" for="adults">2</output>
+							 <button>-</button>
+							 <input type="number" id="adults" name="adults-amount">
+							 <button>+</button>
 							 
 							 <label for="children">Дети:</label>
-							 <input type="range" id="children" name="children-amount" step="1" min="1" max="100">
-							 <output name="children-amount-result" for="children">0</output>
+							 <button>-</button>
+							 <input type="number" id="children" name="children-amount">
+							 <button>+</button>
 						 </div>
 						 <input type="submit" value="Найти">
 				     </fieldset>
