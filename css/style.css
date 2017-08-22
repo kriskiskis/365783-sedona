@@ -1,0 +1,41 @@
+body {
+	font-family: "PTSans", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	color: black;
+}
+
+.main-page h2 {
+	font-family: "PTSans", sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: black;
+}
+
+.advantages h3 {
+	font-family: "PTSans", sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+	color: black;
+}
+
+.advantages.pictured h3,
+.advantages.pictured-2 h3 {
+	font-family: "PTSans", sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+	color: white;
+}
+
+.hotel-found-description h3 {
+	font-family: "PTSans", sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: black;
+}
+
