@@ -1,5 +1,5 @@
 body {
-	font-family: "PTSans", sans-serif;
+	font-family: "PTSans", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 21px;
@@ -7,7 +7,7 @@ body {
 }
 
 .main-page h2 {
-	font-family: "PTSans", sans-serif;
+	font-family: "PTSans", Arial, sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
@@ -15,7 +15,7 @@ body {
 }
 
 .advantages h3 {
-	font-family: "PTSans", sans-serif;
+	font-family: "PTSans", Arial, sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 21px;
@@ -24,7 +24,7 @@ body {
 
 .advantages.pictured h3,
 .advantages.pictured-2 h3 {
-	font-family: "PTSans", sans-serif;
+	font-family: "PTSans", Arial, sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 21px;
@@ -32,7 +32,7 @@ body {
 }
 
 .hotel-found-description h3 {
-	font-family: "PTSans", sans-serif;
+	font-family: "PTSans", Arial, sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
