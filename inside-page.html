@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
     <title>Размещение в Седоне</title>
   </head>
@@ -18,11 +20,11 @@
 		         <li><a href="#">Информация</a></li>
 			     <li><a href="#">Фото и видео</a></li>
 			     <li><a href="#">Карта штата</a></li>
-			     <li><a href="#">Гостиницы</a></li>
+			     <li><a href="../365783-sedona/inside-page.html" class="selected-page">Гостиницы</a></li>
 		     </ul>
 	     </nav>
 	 </header>
-	 <main>
+	 <main class="inside-page">
 	     <div class="choose-hotel">
 		     <h2 class="visually-hidden">Фильтр выбора отеля</h2>
              <form class="about-hotel">
@@ -64,7 +66,7 @@
                      <input type="number" id="price-max" name="price-max" max="3000"> <br>
 					 <input type="range" min="1" max="3000">
 				 </fieldset>
-				 <input type="submit" value="Показать">
+				 <input class="button-show-results" type="submit" value="Показать">
 			 </form>
 		 </div>
 		 <section class="results-of-search">
@@ -87,7 +89,7 @@
 				     <img src="img/hotel-amara-resort-&-spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
 				 </div>
 				 <div class="hotel-found-description">
-				     <h3>Amara Resort & Spa</h3>
+				     <h3><a href="#" class="hotel-name">Amara Resort & Spa</a></h3>
 					 <p class="type-accomodation">Гостиница</p>
 					 <p class type="cost-accomodation">от 4000 Р.</p>
 					 <a href="#" class="more-button">Подробнее</a>
@@ -102,7 +104,7 @@
 				     <img src="img/hotel-desert-quail-inn.jpg" width="135" height="90" alt="Desert Quail Inn">
 				 </div>
 				 <div class="hotel-found-description">
-				     <h3>Desert Quail Inn</h3>
+				     <h3><a href="#" class="hotel-name">Desert Quail Inn</a></h3>
 					 <p class="type-accomodation">Мотель</p>
 					 <p class type="cost-accomodation">от 3000 Р.</p>
 					 <a href="#" class="more-button">Подробнее</a>
@@ -117,7 +119,7 @@
 				     <img src="img/hotel-villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas At Poco Diablo">
 				 </div>
 				 <div class="hotel-found-description">
-				     <h3>Villas At Poco Diablo</h3>
+				     <h3><a href="#" class="hotel-name">Villas At Poco Diablo</a></h3>
 					 <p class="type-accomodation">Апартаменты</p>
 					 <p class type="cost-accomodation">от 2000 Р.</p>
 					 <a href="#" class="more-button">Подробнее</a>
@@ -136,9 +138,9 @@
 			 <li><a class="social-button" href="#">Facebook</a></li>
 			 <li><a class="social-button" href="#">YouTube</a></li>
 		 </ul>
-		 <p>
+		 <p class="creator">
 		     <span>Website by</span>
-			 <a class="creator" href="#">html academy</a>
+			 <a class="creator-name" href="#">html academy</a>
 		 </p>
 	 </footer>
    </body>
