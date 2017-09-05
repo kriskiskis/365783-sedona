@@ -1,5 +1,4 @@
 body {
-	width: 768px;
 	margin: 0;
 	padding: 0;
 	font-family: "PTSans", Arial, sans-serif;
@@ -7,6 +6,11 @@ body {
 	font-weight: normal;
 	line-height: 21px;
 	color: #000000;
+}
+
+.page-container {
+	width: 768px;
+	margin: 0 auto;
 }
 
 a {
@@ -146,6 +150,20 @@ a.selected-page {
 	font-size: 14px;
 	line-height: 21px;
 	background-color: #81b3d2;
+}
+
+.advantages-description {
+	width: 202px;
+	margin: auto;
+	padding-right: 27px;
+	padding-left: 27px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #81b3d2;
+}
+
+.pictured-2 .advantages-description {
+	order: 2;
 }
 
 
@@ -290,6 +308,14 @@ input.found-button {
 	margin: auto 0;
 }
 
+.last-block {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+}
+
 .price {
 	width: 226px;
 	margin: auto 0;
@@ -315,6 +341,7 @@ input.found-button {
 }
 
 .button-show-results {
+	width: 133px;
 	font-size: 14px;
 	text-transform: uppercase;
 	line-height: 21px;
