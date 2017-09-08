@@ -9,6 +9,7 @@ body {
 }
 
 .page-container {
+	position: relative;
 	width: 768px;
 	margin: 0 auto;
 }
@@ -83,10 +84,12 @@ a.selected-page {
 	display: block;
 	position: absolute;
 	z-index: 2;
+	left: 0;
+	right: 0;
 	top: 0;
-	left: 42%;
 	width: 140px;
 	height: 75px;
+	margin: auto;
 }
 
 .main-page {
@@ -303,8 +306,14 @@ a.selected-page {
 
 .main-booking-form label {
 	display: inline-block;
-	margin: auto 0;
-	margin-right: 20px;
+	width: 114px;
+	margin: 0;
+	padding: 9px 0;
+}
+
+.age label:last-of-type {
+	width: 65px;
+	margin-left: 60px;
 }
 
 .booking-form.search {
@@ -330,6 +339,7 @@ a.booking-form.search:active {
 .booking-form input {
 	display: inline-block;
 	margin-bottom: 30px;
+	padding: 9px 0;
 	font: inherit;
     background-color: #f2f2f2;
 	border: none;
@@ -374,6 +384,7 @@ a.booking-form.search:active {
 
 .age {
 	display: inline-block;
+	position: relative;
     vertical-align: top;
 	margin: 0;
 	padding: 0;
@@ -381,19 +392,70 @@ a.booking-form.search:active {
 }
 
 .age input {
-	width: 85px;
-	padding: 2px 15px;
+	width: 95px;
+	margin: 0;
+	margin-bottom: 30px;
+	padding: 5px 0;
 	text-align: center;
+	vertical-align: center;
 }
 
 .age button {
 	display: inline-block;
-    vertical-align: top;
+	position: absolute;
+    vertical-align: center;
+	top: 15%;
+	margin: 0;
 	padding: 0;
 	border: none;
     outline: none;
-	color: #a9a9a9;
 	background: #f2f2f2;
+}
+
+.age .minus-button::before {
+	content: '–';
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	margin: auto 0;
+	padding: auto 0;
+	padding-left: 10px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+	color: #a9a9a9;
+}
+
+.age .plus-button::after {
+	content: '+';
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	padding-right: 23px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+	color: #a9a9a9;
+}
+
+.age button:hover .minus-button::before,
+.age button:focus .minus-button::before,
+.age button:hover .plus-button::after,
+.age button:focus .plus-button::after {
+	color: #000000;
+	cursor: pointer;
+}
+
+.age button:active .minus-button::before,
+.age button:active .plus-button::after {
+	color: #81b3d2;
+	cursor: pointer;
 }
 
 input.found-button {
@@ -447,7 +509,8 @@ input.found-button:active {
 	color: #000000;
 	background-image: url("../img/main-view-inside.jpg");
 	background-repeat: no-repeat;
-	background-position: 0% 0%;
+	background-position: 0 50%;
+	background-size: cover;
 }
 
 .choose {
@@ -909,14 +972,16 @@ a.booking-button:active {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin: 35px 0;
+	padding: 35px 0;
 	text-transform: uppercase;
-	background-color: rgba (255,255,255,0.9);
+	background-color: rgba(255,255,255,0.9);
 }
 
 .first .main-footer {
-	position: relative;
-	top: -120px;
+	position: absolute;
+	width: 100%; 
+	left: 0; 
+	bottom: 0;
 }
 
 .tag-sedona {
@@ -957,7 +1022,7 @@ a.booking-button:active {
 
 .social-button:active {
 	background-color: #5496bd;
-	color: rgba (255,255,255,0.3);
+	color: rgba(255,255,255,0.3);
 }
 
 .social-button:active img {
