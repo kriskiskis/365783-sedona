@@ -6,16 +6,23 @@ body {
 	font-weight: normal;
 	line-height: 21px;
 	color: #000000;
+	background-color: #f2f2f2;
 }
 
 .page-container {
 	position: relative;
-	width: 768px;
+	min-width: 768px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -39,7 +46,7 @@ input[type="radio"].visually-hidden {
 	flex-direction: row;
 	position: relative;
 	align-items: center;
-	width: 768px;
+	width: 1200px;
 	margin: 0;
 	padding: 0;
 	min-height: 26px;
@@ -57,10 +64,38 @@ input[type="radio"].visually-hidden {
 	justify-content: space-around;
 	align-items: center;
 	position: relative;
+	padding-left: 6%;
+	padding-right: 6%;
 	list-style: none;
 }
 
-.menu a:not(.logo-sedona) {
+.menu .start-points,
+.menu .end-points {
+	display: flex;
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+
+.menu .start-points {
+	justify-content: flex-start;
+	
+}
+
+.menu .end-points {
+	justify-content: flex-end;
+	text-align: end;
+}
+
+.start-points li {
+	padding-right: 140px;
+}
+
+.end-points li {
+	padding-left: 163px;
+}
+
+.menu a {
 	display: block;
 	padding: 20px 0; 
 	vertical-align: middle;
@@ -86,7 +121,6 @@ a.selected-page {
 	z-index: 2;
 	left: 0;
 	right: 0;
-	top: 0;
 	width: 140px;
 	height: 75px;
 	margin: auto;
@@ -102,15 +136,16 @@ a.selected-page {
 	text-transform: uppercase;
 	line-height: 21px;
 	color: #000000;
+	background-color: #ffffff;
 }
 
 .tagline {
 	display: flex;
 	position: relative;
-	top: -5px;
+	top: -7px;
 	justify-content: center;
 	align-items: center;
-	height: 512px;
+	height: 513px;
 	background-color: #81b3d2;
 	background-image: 
 	    url("../img/main-view.jpg");
@@ -119,7 +154,10 @@ a.selected-page {
 
 .sedona-cool {
 	display: inline-block;
-	padding: 47px 119px 17px;
+	padding: 0;
+	margin: 0;
+	margin-top: 58px;
+	margin-bottom: 32px;
 	text-align: center;
 	font-size: 21px;
 	font-weight: bold;
@@ -129,7 +167,7 @@ a.selected-page {
 .main-page h2 {
 	display: inline-block;
 	margin: 0;
-	margin-bottom: 36px;
+	margin-bottom: 52px;
 	padding: 0;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
@@ -158,6 +196,8 @@ a.selected-page {
 }
 
 .advantages.pictured h3 {
+	margin-right: 77px;
+	margin-left: 77px;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 21px;
 	font-weight: bold;
@@ -166,7 +206,7 @@ a.selected-page {
 }
 
 .advantages.pictured {
-	width: 768px;
+	width: 100%;
 	font-size: 14px;
 	line-height: 21px;
 	background-color: #81b3d2;
@@ -177,10 +217,10 @@ a.selected-page {
 }
 
 .advantages-description {
-	width: 178px;
+	width: 308px;
 	margin: auto;
-	margin-right: 39px;
-	margin-left: 39px;
+	padding-right: 46px;
+	padding-left: 46px;
 	text-align: center;
 	color: #ffffff;
 	background-color: #81b3d2;
@@ -188,9 +228,10 @@ a.selected-page {
 
 .recomendations {
 	display: flex;
-	height: 330px;
 	position: relative;
 	margin: 0;
+	margin-top: 164px;
+	margin-bottom: 84px;
 	padding: 0;
 	font-size: 14px;
 	line-height: 21px;
@@ -202,8 +243,11 @@ a.selected-page {
 	position: relative;
 	width: 33,3333%;
 	margin: auto 0;
-	margin-bottom: 58px;
 	text-align: center;
+}
+
+.recomendations h3 {
+	margin-top: 30px;
 }
 
 .recomendations li:first-child h3::before {
@@ -250,12 +294,32 @@ a.selected-page {
 	margin: 0 39px;
 }
 
-.advantages .block {
-	width: 160px;
+.block {
+	width: 262px;
+	padding: 0 69px;
+	padding-bottom: 62px;
+	padding-top: 50px;
 	margin: 0;
-	padding: 35px 48px;
 	text-align: center;
+	vertical-align: center;
 	background-color: #eeeeee;
+}
+
+.block h3,
+.block p {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.block p:nth-of-type(1) {
+	margin: 27px 0;
+}
+
+.block h3 {
+	padding: 0 50px;
 }
 
 .booking-title {
@@ -481,6 +545,8 @@ input.found-button:active {
 	outline: none;
 }
 
+
+
 .inside-page {
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
@@ -488,6 +554,7 @@ input.found-button:active {
 	text-transform: uppercase;
 	line-height: 21px;
 	color: #000000;
+	background-color: #ffffff;
 }
 
 .about-hotel {
