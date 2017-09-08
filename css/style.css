@@ -11,9 +11,11 @@ body {
 
 .page-container {
 	position: relative;
-	min-width: 768px;
-	max-width: 1200px;
+	width: 1200px;
 	margin: 0 auto;
+	box-shadow: 
+	    -5px -5px 15px 0 rgba(0,0,0,0.2),
+	    5px 5px 15px 0 rgba(0,0,0,0.2);
 }
 
 a {
@@ -61,7 +63,6 @@ input[type="radio"].visually-hidden {
 
 .main-navigation .menu {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 	position: relative;
 	padding-left: 6%;
@@ -69,35 +70,27 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
-.menu .start-points,
-.menu .end-points {
-	display: flex;
-	width: 50%;
-	margin: 0;
-	padding: 0;
+.menu li {
+	width: 20%;
+	padding: 15px 0;
 }
 
-.menu .start-points {
-	justify-content: flex-start;
-	
+.menu li:first-of-type,
+.menu li:nth-of-type(2) {
+	text-align: left;
 }
 
-.menu .end-points {
-	justify-content: flex-end;
-	text-align: end;
+.menu li:last-of-type,
+.menu li:nth-of-type(3) {
+	text-align: right;
 }
 
-.start-points li {
-	padding-right: 140px;
-}
-
-.end-points li {
-	padding-left: 163px;
+.menu li:nth-of-type(2) {
+	margin-right: 20%;
 }
 
 .menu a {
 	display: block;
-	padding: 20px 0; 
 	vertical-align: middle;
 	color: #000000;
 }
@@ -142,7 +135,6 @@ a.selected-page {
 .tagline {
 	display: flex;
 	position: relative;
-	top: -7px;
 	justify-content: center;
 	align-items: center;
 	height: 513px;
@@ -190,22 +182,22 @@ a.selected-page {
 .advantages h3 {
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 21px;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 21px;
 	color: #000000;
 }
 
 .advantages.pictured h3 {
-	margin-right: 77px;
-	margin-left: 77px;
+	margin-right: 63px;
+	margin-left: 63px;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 21px;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 21px;
 	color: #ffffff;
 }
 
-.advantages.pictured {
+.advantages .pictured {
 	width: 100%;
 	font-size: 14px;
 	line-height: 21px;
@@ -217,21 +209,37 @@ a.selected-page {
 }
 
 .advantages-description {
-	width: 308px;
+	box-sizing: border-box;
+	width: 33.333333%;
 	margin: auto;
-	padding-right: 46px;
-	padding-left: 46px;
+	padding: 38px 60px;
 	text-align: center;
 	color: #ffffff;
 	background-color: #81b3d2;
+}
+
+.content-image-town {
+	width: 66.666666%;
+	background-image: url('../img/real-town.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 50%;
+}
+
+.content-image-bridge {
+	width: 66.666666%;
+	background-image: url('../img/diablo-bridge.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 50%;
 }
 
 .recomendations {
 	display: flex;
 	position: relative;
 	margin: 0;
-	margin-top: 164px;
-	margin-bottom: 84px;
+	margin-top: 55px;
+	margin-bottom: 85px;
 	padding: 0;
 	font-size: 14px;
 	line-height: 21px;
@@ -243,18 +251,15 @@ a.selected-page {
 	position: relative;
 	width: 33,3333%;
 	margin: auto 0;
+	padding-top: 100px;
 	text-align: center;
 }
 
-.recomendations h3 {
-	margin-top: 30px;
-}
-
-.recomendations li:first-child h3::before {
+.house::before {
 	content: "";
 	position: absolute;
 	right: 50%;
-	top: -70px;
+	top: 0;
 	width: 75px;
 	height: 75px;
 	margin-right: -35px;
@@ -263,11 +268,11 @@ a.selected-page {
 	background-repeat: no-repeat;
 }
 
-.recomendations li:nth-child(2) h3::before {
+.food::before {
 	content: "";
 	position: absolute;
 	right: 50%;
-	top: -70px;
+	top: 0;
 	width: 75px;
 	height: 75px;
 	margin-right: -35px;
@@ -276,11 +281,11 @@ a.selected-page {
 	background-repeat: no-repeat;
 }
 
-.recomendations li:last-child h3::before {
+.items::before {
 	content: "";
 	position: absolute;
 	right: 50%;
-	top: -73px;
+	top: 0;
 	width: 75px;
 	height: 78px;
 	margin-right: -40px;
@@ -295,7 +300,9 @@ a.selected-page {
 }
 
 .block {
-	width: 262px;
+	flex-grow: 1;
+	box-sizing: border-box;
+	width: 33.33333%;
 	padding: 0 69px;
 	padding-bottom: 62px;
 	padding-top: 50px;
@@ -323,7 +330,8 @@ a.selected-page {
 }
 
 .booking-title {
-	margin: 43px auto;
+	margin-top: 55px;
+	margin-bottom: 49px;
 }
 
 .booking-title p:first-of-type {
@@ -345,23 +353,25 @@ a.selected-page {
 	justify-content: center;
 	align-items: center;
 	align-self: center;
+	position: relative;
+	left: 19%;
+	width: 570px;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 26px;
 }
 
 .booking-form .fill-in {
+	position: absolute;
+	top: 0;
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	width: 570px;
 }
 
 .main-booking-form {
 	display: flex;
-	position: absolute;
-	top: 0;
-    width: 460px;
+	flex-direction: column;
 	margin: 0;
 	padding: 55px;
 	background-color: #ffffff;
@@ -370,18 +380,17 @@ a.selected-page {
 
 .main-booking-form label {
 	display: inline-block;
-	width: 114px;
+	width: 110px;
 	margin: 0;
 	padding: 9px 0;
 }
 
 .age label:last-of-type {
 	width: 65px;
-	margin-left: 60px;
+	margin-left: 40px;
 }
 
 .booking-form.search {
-	width: 570px;
 	padding: 22px 0;
 	font-size: 21px;
 	font-weight: bold;
@@ -397,13 +406,14 @@ a.booking-form.search:focus {
 
 a.booking-form.search:active {
 	background-color: #503e33;
-	color: rgba (255,255,255,0.3);
+	color: rgba(255,255,255,0.3);
 }
 
 .booking-form input {
 	display: inline-block;
 	margin-bottom: 30px;
 	padding: 9px 0;
+	text-transform: uppercase;
 	font: inherit;
     background-color: #f2f2f2;
 	border: none;
@@ -422,7 +432,7 @@ a.booking-form.search:active {
 	display: inline-block;
     vertical-align: top;
 	box-sizing: border-box;
-	width: 320px;
+	width: 340px;
 	padding: 7px 0;
 	padding-right: 15px;
 	padding-left: 10px;
@@ -442,82 +452,60 @@ a.booking-form.search:active {
 	margin: 0;
 	padding: 0;
 	margin-top: 9px;
-	background-image: url('../img/calendar.svg');
-	background-repeat: no-repeat;
+	fill: #cacaca;
+}
+
+.calendar a:hover svg,
+.calendar a:focus svg {
+	fill: #000000;
+}
+
+.calendar a:active svg{
+	fill: #81b3d2;
 }
 
 .age {
 	display: inline-block;
 	position: relative;
-    vertical-align: top;
+    vertical-align: bottom;
 	margin: 0;
 	padding: 0;
-    border: none;
 }
 
 .age input {
-	width: 95px;
+	box-sizing: border-box;
+	width: 39px;
 	margin: 0;
+	margin-right: -4px;
+	margin-left: -4px;
 	margin-bottom: 30px;
-	padding: 5px 0;
+	padding: 6px 0;	
 	text-align: center;
-	vertical-align: center;
+	vertical-align: top;
 }
 
 .age button {
 	display: inline-block;
-	position: absolute;
-    vertical-align: center;
-	top: 15%;
+    vertical-align: top;
+	width: 38px;
+	height: 38px;
 	margin: 0;
 	padding: 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+	color: #a9a9a9;
 	border: none;
-    outline: none;
 	background: #f2f2f2;
 }
 
-.age .minus-button::before {
-	content: '–';
-	display: inline-block;
-	position: absolute;
-	width: 100%;
-	margin: auto 0;
-	padding: auto 0;
-	padding-left: 10px;
-	text-align: center;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 21px;
-	color: #a9a9a9;
-}
-
-.age .plus-button::after {
-	content: '+';
-	display: inline-block;
-	position: absolute;
-	width: 100%;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	padding-right: 23px;
-	text-align: center;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 21px;
-	color: #a9a9a9;
-}
-
-.age button:hover .minus-button::before,
-.age button:focus .minus-button::before,
-.age button:hover .plus-button::after,
-.age button:focus .plus-button::after {
+.age button:hover,
+.age button:focus {
 	color: #000000;
 	cursor: pointer;
 }
 
-.age button:active .minus-button::before,
-.age button:active .plus-button::after {
+.age button:active {
 	color: #81b3d2;
 	cursor: pointer;
 }
@@ -532,22 +520,27 @@ input.found-button {
 	line-height: 26px;
 	color: #ffffff;
 	background-color: #81b3d2;
+	cursor: pointer;
 }
 
 input.found-button:hover,
 input.found-button:focus {
 	background-color: #669ec0;
+	cursor: pointer;
 }
 
 input.found-button:active {
 	background-color:#5496bd;
-	color: rgba (255,255,255,0.3);
-	outline: none;
+	color: rgba(255,255,255,0.3);
+	cursor: pointer;
 }
 
 
 
+
 .inside-page {
+	width: 1200px;
+	margin: 0 auto;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: normal;
@@ -559,12 +552,16 @@ input.found-button:active {
 
 .about-hotel {
 	display: flex;
-	padding: 21px 45px;
+	padding: 30px 6%;
 }
 
 .about-hotel fieldset {
 	color: #ffffff;
 	border: none;
+}
+
+.about-hotel fieldset:last-child {
+	text-align: right;
 }
 
 .choose-hotel {
@@ -587,7 +584,7 @@ input.found-button:active {
 }
 
 .choose legend {
-	margin-bottom: 28px;
+	margin-bottom: 31px;
     font-size: 16px;
 	font-weight: bold;
 	line-height: 21px;
@@ -616,8 +613,11 @@ input.found-button:active {
 .last-block {
 	display: flex;
 	flex-direction: column;
+	position: absolute;
+	right: 0;
 	margin: 0;
 	padding: 0;
+	padding-right: 6%;
 }
 
 .form-checkbox + label {
@@ -656,9 +656,12 @@ input.found-button:active {
 }
 
 .price {
-	width: 226px;
+	width: 330px;
+	font-weight: 600;
+	font-size: 16px;
+    line-height: 21px;
 	margin: auto 0;
-	margin-right: 44px;
+	color: #ffffff;
 }
 
 .price legend {
@@ -691,23 +694,22 @@ input.found-button:active {
 .price-control label {
     display: inline-block;
     font-size: 14px;
+	font-weight: normal;
     line-height: 38px;
     vertical-align: top;
     cursor: pointer;
 }
 
-.price-control .price-min {
-    padding-left: 38px;
-}
-
-
+.price-control .price-min,
 .price-control .price-max {
-	padding-left: 20px;
+    width: 90px;
+    padding-left: 65px;
 }
 
 .price-control input {
     width: 50px;
     margin: 0;
+	font-weight: normal;
     color: inherit;
     font: inherit;
     background: none;
@@ -764,10 +766,9 @@ input.found-button:active {
 .button-show-results {
 	display: block;
 	margin: 0 auto;
-	margin-top: 10px;
-	margin-left: 45px;
-	padding-left: 35px;
-	padding-right: 34px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0 35px;
 	font-size: 14px;
 	text-transform: uppercase;
 	line-height: 33px;
@@ -786,13 +787,15 @@ input.found-button:active {
 
 .results-of-search {
 	display: flex;
+	position: relative;
 	min-height: 86px;
 	margin: 0;
-	padding: 0;
+	padding: 0 6%;
 }
 
 .results-of-search p:first-of-type {
-	margin: auto 46px;
+	margin: auto 0;
+	margin-right: 46px;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
@@ -849,6 +852,9 @@ input.found-button:active {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	position: absolute;
+	right: 6%;
+	top: 40%;
 	margin: 0;
 	padding: 0;
 }
@@ -899,7 +905,7 @@ a.sorting-results:active {
 	display: flex;
 	align-items: center;
 	margin: auto 0;
-	padding: 30px 46px;
+	padding: 30px 6%;
 	border-bottom: 2px solid #e5e5e5;
 }
 
@@ -1000,6 +1006,8 @@ a.booking-button:active {
 	align-self: flex-end;
 	flex-direction: column;
 	align-items: flex-end;
+	position: absolute;
+	right: 6%;
 	width: 240px;
 	min-height: 98px;
 	margin: 0;
@@ -1044,15 +1052,17 @@ a.booking-button:active {
 	background-color: rgba(255,255,255,0.9);
 }
 
-.first .main-footer {
+.first-page .main-footer {
 	position: absolute;
 	width: 100%; 
 	left: 0; 
 	bottom: 0;
 }
 
+
 .tag-sedona {
-	width: 140px;
+	box-sizing: border-box;
+	width: 33.3333%;
 	margin: auto 0;
 	padding-left: 55px;
 	font-size: 21px;
@@ -1064,8 +1074,9 @@ a.booking-button:active {
 .social-networks {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 150px;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 33.3333%;
 	margin: auto;
     padding: 0;
 	text-align: center;
@@ -1077,7 +1088,8 @@ a.booking-button:active {
 	align-items: center;
     justify-content: center;
 	width: 47px;
-	height: 50px;
+	height: 48px;
+	margin-left: 5px;
 	background-color: #81b3d2;
 	color: #ffffff;
 }
@@ -1087,20 +1099,21 @@ a.booking-button:active {
 	background-color: #669ec0;
 }
 
-.social-button:active {
+.social-button:active path {
 	background-color: #5496bd;
-	color: rgba(255,255,255,0.3);
+	fill: rgba(255,255,255,0.3);
 }
 
-.social-button:active img {
-	fill: rgba (255,255,255,0.3);
+.social-button:active path {
+	fill: rgba(255,255,255,0.3);
 }
 
 .creator {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 251px;
+	box-sizing: border-box;
+	width: 33.3333%;
 	margin: auto 0;
 	text-align: center;
 }
@@ -1128,6 +1141,3 @@ a.booking-button:active {
 .creator-name:active path {
 	fill: #bdbbbc;
 }
-
-
-

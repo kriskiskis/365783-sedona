@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<link href="css/normalize.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet">
     <title>Размещение в Седоне</title>
   </head>
@@ -11,21 +11,17 @@
   <div class="page-container">
      <header class="main-header">
 	     <h1 class="visually-hidden">Главное меню</h1>
-		 <a href="#" class="logo-sedona">
+		 <a href="../365783-sedona/index.html" class="logo-sedona">
 			 <span class="visually-hidden">Герб Седоны</span>
 			 <img src="img/logo-sedona.png" width="140" height="75" alt="Герб Седоны">
 		 </a>
 	     <nav class="main-navigation">
 		     <p class="visually-hidden">Навигация по сайту</p>
 	         <ul class="main-navigation menu">
-			     <div class="start-points">
-		             <li><a href="#">Информация</a></li>
-			         <li><a href="#">Фото и видео</a></li>
-				 </div>
-				 <div class="end-points">
-			         <li><a href="#">Карта штата</a></li>
-			         <li><a href="#">Гостиницы</a></li>
-				 </div>
+		         <li><a href="#">Информация</a></li>
+			     <li><a href="#">Фото и видео</a></li>
+			     <li><a href="#">Карта штата</a></li>
+			     <li><a class="selected-page" href="#">Гостиницы</a></li>
 		     </ul>
 	     </nav>
 	 </header>
@@ -73,10 +69,8 @@
                  <fieldset class="price">
 				     <legend>Стоимость в сутки (Р):</legend>
 					 <div class="price-control">
-					     <label for="price-min" class="price-min">От 0</label>
-					     <input type="number" id="price-min" name="price-min" value="0">
-					     <label for="price-max" class="price-max">до 3000</label>
-						 <input type="number" id="price-max" name="price-max" value="3000">
+					     <label class="price-min">oт <input type="text" name="price-min" value="0"></label>
+					     <label class="price-max">до <input type="text" name="price-max" value="3000"></label>
 					 </div>
                      <div class="range-controls">
                          <div class="scale">
